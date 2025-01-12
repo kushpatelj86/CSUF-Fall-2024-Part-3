@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #content {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome!</h1>
+  <input type="text" id="nameInput" placeholder="Enter your name" />
+  <button id="renderBtn">Render Content</button>
+  
+  <div id="content"></div>
+
+  <script>
+    document.getElementById('renderBtn').addEventListener('click', () => {
+      const name = document.getElementById('nameInput').value; // Get user input
+      const contentDiv = document.getElementById('content'); // Target content div
+      
+      if (name.trim()) {
+        contentDiv.innerHTML = `<h2>Hello, ${name}!</h2><p>This content was rendered on the client side.</p>`;
+      } else {
+        contentDiv.innerHTML = `<p>Please enter a valid name.</p>`;
+      }
+    });
+  </script>
+</body>
+</html>

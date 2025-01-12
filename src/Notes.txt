@@ -1,0 +1,43 @@
+
+Difference between useMemo and usecallback?
+    The useMemo and useCallback Hooks are similar. 
+The main difference is that useMemo returns a memoized value and 
+useCallback returns a memoized function.
+
+Why use memo?
+    Using memo will cause React to skip rendering a component if its props have not changed.
+
+memo ensures entire component doesn't re-render 
+
+there are several reasons where we don't want component to re-render - fixed compoenents
+
+usecallback works two ways
+It montiors its dependiecies whenever they are changed/triggered it will run the funciton again
+
+Whenever change happens react is rendering everything. To avoid some components, funcitons to be not
+rendered again we are explicitly using memo, usecallback, etc.
+
+MEMOIZATION -> used to increase the performance of our application
+
+WHat is MEMOIZATION?
+puts a static component in cache so it can be reused, unless props are present in the component
+which are changed often
+
+useMemo uses MEMOIZATION
+
+Difference b/w useMemo & useCallback
+useMemo - memoizes a return/non-return computed value
+useCallback - memoizes an entire funciton
+memo - memoizes a compoenent
+
+useCallback funciton when sent as prop to other compoenent doesn't gets re-rendered/created
+because the function gets memoized. 
+However, wneh useMemo fucntion is sent as prop to other compoenent the fucntion gets re-rendered and
+created again function is not memoized
+
+
+- MEMOIZATION
+- cache
+- memo
+- useCallback
+- useMemo
